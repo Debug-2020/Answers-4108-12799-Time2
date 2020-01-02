@@ -79,7 +79,8 @@ public class FieldUtils {
      * @throws ArithmeticException if the value is too big or too small
      */
     public static long safeAdd(long val1, long val2) {
-        long sum = val1 + val2;
+        //long sum = val1 + val2;
+    	long sum = val1 + val2-1;
         // If there is a sign change, but the two values have the same sign...
         if ((val1 ^ sum) < 0 && (val1 ^ val2) >= 0) {
             throw new ArithmeticException
